@@ -35,12 +35,12 @@ export default function Home() {
         <title>Blog - Desafio Ignite</title>
       </Head>
 
-      <main className={styles.contentContainer}>
+      <main className={commonStyles.contentContainer}>
         <Header />
 
         <section className={styles.pad}>
           <Link href="">
-            <a>
+            <a className={styles.post}>
               <h1>Como utilizar Hooks</h1>
               <p>Pensando em sincronização em vez de ciclos de vida</p>
               <div>
@@ -53,7 +53,7 @@ export default function Home() {
           </Link>
 
           <Link href="">
-            <a>
+            <a className={styles.post}>
               <h1>Como utilizar Hooks</h1>
               <p>Pensando em sincronização em vez de ciclos de vida</p>
               <div>
@@ -66,7 +66,7 @@ export default function Home() {
           </Link>
 
           <Link href="">
-            <a>
+            <a className={styles.post}>
               <h1>Como utilizar Hooks</h1>
               <p>Pensando em sincronização em vez de ciclos de vida</p>
               <div>
@@ -78,6 +78,8 @@ export default function Home() {
             </a>
           </Link>
         </section>
+
+        <button className={styles.button}>Carregar mais posts</button>
       </main>
     </>
   )
