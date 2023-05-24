@@ -1,9 +1,13 @@
 import { GetStaticProps } from 'next';
+import Head from 'next/head'
+import Link from 'next/link'
+import { FiCalendar, FiUser } from 'react-icons/fi'
 
 import { getPrismicClient } from '../services/prismic';
 
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
+import Header from '../components/Header';
 
 interface Post {
   uid?: string;
@@ -24,9 +28,61 @@ interface HomeProps {
   postsPagination: PostPagination;
 }
 
-// export default function Home() {
-//   // TODO
-// }
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Blog - Desafio Ignite</title>
+      </Head>
+
+      <main className={styles.contentContainer}>
+        <Header />
+
+        <section className={styles.pad}>
+          <Link href="">
+            <a>
+              <h1>Como utilizar Hooks</h1>
+              <p>Pensando em sincronização em vez de ciclos de vida</p>
+              <div>
+                <FiCalendar />
+                <time>15 Mar 2021</time>
+                <FiUser />
+                <p>Joseph Oliveira</p>
+              </div>
+            </a>
+          </Link>
+
+          <Link href="">
+            <a>
+              <h1>Como utilizar Hooks</h1>
+              <p>Pensando em sincronização em vez de ciclos de vida</p>
+              <div>
+                <FiCalendar />
+                <time>15 Mar 2021</time>
+                <FiUser />
+                <p>Joseph Oliveira</p>
+              </div>
+            </a>
+          </Link>
+
+          <Link href="">
+            <a>
+              <h1>Como utilizar Hooks</h1>
+              <p>Pensando em sincronização em vez de ciclos de vida</p>
+              <div>
+                <FiCalendar />
+                <time>15 Mar 2021</time>
+                <FiUser />
+                <p>Joseph Oliveira</p>
+              </div>
+            </a>
+          </Link>
+        </section>
+      </main>
+    </>
+  )
+  // TODO
+}
 
 // export const getStaticProps = async () => {
 //   // const prismic = getPrismicClient({});
