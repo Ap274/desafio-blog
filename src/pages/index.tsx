@@ -127,7 +127,7 @@ export const getStaticProps: GetStaticProps = async () => {
     results: postsResponse.results,
   };
 
-  console.log(postsPagination.next_page);
+  // console.log(postsPagination.next_page);
 
   return {
     props: {
